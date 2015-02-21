@@ -1,0 +1,22 @@
+{
+    "name": "kostaspt/crontabber",
+    "description": "A simple way to add Laravel schedule command to crontab",
+    "keywords": ["cron", "crontab"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Konstantinos Pittas",
+            "email": "konstantinos.pittas@gmail.com",
+            "homepage": "http://pittas.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crontabber\\": "src/"
+        }
+    }
+}
