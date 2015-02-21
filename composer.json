@@ -1,6 +1,6 @@
 {
     "name": "kostaspt/crontabber",
-    "description": "A simple way to add Laravel schedule command to crontab",
+    "description": "Adds the cron command that Laravel 5 needs for scheduling commands in your crontab.",
     "keywords": ["cron", "crontab"],
     "license": "MIT",
     "authors": [
