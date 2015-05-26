@@ -1,5 +1,6 @@
 <?php namespace Crontabber;
 
+use Bart\Shell\Command;
 use Illuminate\Support\ServiceProvider;
 
 class CrontabberServiceProvider extends ServiceProvider {
@@ -13,7 +14,7 @@ class CrontabberServiceProvider extends ServiceProvider {
     {
         $command = '* * * * * `which php` ' . base_path() . '/artisan schedule:run 1>> /dev/null 2>&1';
 
-        $output = shell_exec('crontab -l');
+        $output = (new Command('crontab -l'))->run();
 
         $isCronOn = $this->checkIfCronExists($output, $command);
 
@@ -45,6 +46,6 @@ class CrontabberServiceProvider extends ServiceProvider {
 
         file_put_contents($dir . '/crontab.txt', $output . $command . PHP_EOL);
 
-        exec('crontab ' . $dir . '/crontab.txt');
+        (new Command('crontab ' . $dir . '/crontab.txt'))->run();
     }
 }
