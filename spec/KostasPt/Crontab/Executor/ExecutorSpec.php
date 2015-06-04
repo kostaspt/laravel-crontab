@@ -11,4 +11,11 @@ class ExecutorSpec extends ObjectBehavior
     {
         $this->shouldHaveType('KostasPt\Crontab\Executor\Executor');
     }
+
+    function it_changes_the_base_path()
+    {
+        $this->setBasePath('/path/to/artisan');
+
+        $this->getBasePath()->shouldBe('/path/to/artisan');
+    }
 }

@@ -26,4 +26,9 @@ class Executor {
     {
         $this->basePath = $basePath;
     }
+
+    public function getBasePath()
+    {
+        return $this->basePath;
+    }
 }
