@@ -1,5 +1,7 @@
 ## Laravel Crontab
 
+![Build Status Images](https://travis-ci.org/kostaspt/crontabber.svg)
+
 Laravel 5.x requires you to add the following command to your system's crontab to use the built-in scheduler.
 
 ```
