@@ -3,7 +3,7 @@
 use Bart\Shell\Command;
 use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends ServiceProvider {
+class CrontabServiceProvider extends ServiceProvider {
 
     /**
      * Setup cron

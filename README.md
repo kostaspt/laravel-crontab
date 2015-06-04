@@ -25,6 +25,6 @@ In your `config\app.php`, add the `ServiceProvider` to the providers array.
 ```php
 'providers' => [
     ...
-    'KostasPt\Crontab\ServiceProvider',
+    'KostasPt\Crontab\CrontabServiceProvider',
 ];
 ```
