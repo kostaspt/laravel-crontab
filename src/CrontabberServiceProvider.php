@@ -1,4 +1,4 @@
-<?php namespace Crontabber;
+<?php namespace KostasPt\Crontabber;
 
 use Bart\Shell\Command;
 use Illuminate\Support\ServiceProvider;
