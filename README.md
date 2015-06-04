@@ -1,24 +1,30 @@
-## Crontabber
+## Laravel Crontab
 
-Adds the cron command that Laravel 5 needs for scheduling commands in your crontab.
+Laravel 5 requires the following command to use the built-in scheduler.
+
+```
+* * * * * php /path/to/artisan schedule:run 1>> /dev/null 2>&1
+```
+
+This package adds this command in your crontab.
 
 ### Installation
 
-Add the package to your `composer.json`.
+Add the package to your `composer.json` file.
 
 ```json
 {
     "require": {
-        "kostaspt/crontabber": "dev-master"
+        "kostaspt/laravel-crontab": "dev-master"
     }
 }
 ```
 
-In your `config\app.php`, add `Crontabber` to your providers array
+In your `config\app.php`, add the `ServiceProvider` to the providers array.
 
 ```php
 'providers' => [
     ...
-    'Crontabber\CrontabberServiceProvider',
+    'KostasPt\Crontab\ServiceProvider',
 ];
 ```

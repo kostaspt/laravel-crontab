@@ -1,9 +1,9 @@
-<?php namespace KostasPt\Crontabber;
+<?php namespace KostasPt\Crontab;
 
 use Bart\Shell\Command;
 use Illuminate\Support\ServiceProvider;
 
-class CrontabberServiceProvider extends ServiceProvider {
+class ServiceProvider extends ServiceProvider {
 
     /**
      * Setup cron

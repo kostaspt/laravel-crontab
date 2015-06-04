@@ -1,7 +1,7 @@
 {
-    "name": "kostaspt/crontabber",
+    "name": "kostaspt/laravel-crontab",
     "description": "Adds the cron command that Laravel 5 needs for scheduling commands in your crontab.",
-    "keywords": ["cron", "crontab"],
+    "keywords": ["cron", "crontab", "cronjob", "schedule", "laravel"],
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "KostasPt\\Crontabber\\": "src/"
+            "KostasPt\\Crontab\\": "src/"
         }
     }
 }
