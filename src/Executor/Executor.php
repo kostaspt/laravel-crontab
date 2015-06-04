@@ -2,12 +2,14 @@
 
 class Executor {
 
+    protected $basePath = './';
+
     /**
      * It adds the command to crontab, if needed.
      */
     public function execute()
     {
-        $cronjob = new Job;
+        $cronjob = new Job($this->basePath);
 
         if ( ! $cronjob->shouldBeInstalled()) return;
 
@@ -18,5 +20,10 @@ class Executor {
         file_put_contents($tempFile, $otherCronJobs . $cronjob->getCronCommand() . PHP_EOL);
 
         exec("crontab {$tempFile}");
+    }
+
+    public function setBasePath($basePath)
+    {
+        $this->basePath = $basePath;
     }
 }

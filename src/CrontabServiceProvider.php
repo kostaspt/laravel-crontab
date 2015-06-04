@@ -12,6 +12,10 @@ class CrontabServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        (new Executor)->execute();
+        $executor = new Executor();
+
+        $executor->setBasePath($this->app->basePath());
+
+        $executor->execute();
     }
 }
