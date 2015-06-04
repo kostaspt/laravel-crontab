@@ -11,7 +11,7 @@ class Executor {
 
         if ( ! $cronjob->shouldBeInstalled()) return;
 
-        $tempFile = tempnam(sys_get_temp_dir(), 'Tux');
+        $tempFile = tempnam(sys_get_temp_dir(), 'KP');
 
         $otherCronJobs = shell_exec('crontab -l');
 
