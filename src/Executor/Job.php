@@ -42,6 +42,6 @@ class Job {
             }
         }
 
-        return $isCronJobRunning;
+        return ! $isCronJobRunning;
     }
 }
