@@ -2,15 +2,21 @@
 
 class Job {
 
-    protected $schedule;
+    protected $basePath;
 
-    protected $command;
-
-    function __construct($basePath = './', $command = null, $schedule = null)
+    function __construct($basePath = './')
     {
-        $this->command = $command ?: '`which php` ' . $basePath . '/artisan schedule:run 1>> /dev/null 2>&1';
+        $this->basePath = $basePath;
+    }
 
-        $this->schedule = $schedule ?: '* * * * *';
+    public function getArtisanLocation()
+    {
+        while (substr($this->basePath, -1) == '/')
+        {
+            $this->basePath = substr($this->basePath, 0, -1);
+        }
+
+        return $this->basePath . '/artisan';
     }
 
     /**
@@ -20,7 +26,7 @@ class Job {
      */
     public function getCronCommand()
     {
-        return "{$this->schedule} {$this->command}";
+        return '* * * * * `which php` ' . $this->getArtisanLocation() . ' schedule:run 1>> /dev/null 2>&1';
     }
 
     /**
