@@ -1,4 +1,4 @@
-<?php namespace Kostaspt\Crontab\Executor;
+<?php namespace KostasPt\Crontab\Executor;
 
 class Executor {
 

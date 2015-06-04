@@ -1,7 +1,7 @@
 <?php namespace KostasPt\Crontab;
 
 use Illuminate\Support\ServiceProvider;
-use Kostaspt\Crontab\Executor\Executor;
+use KostasPt\Crontab\Executor\Executor;
 
 class CrontabServiceProvider extends ServiceProvider {
 

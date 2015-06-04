@@ -1,4 +1,4 @@
-<?php namespace Kostaspt\Crontab\Executor;
+<?php namespace KostasPt\Crontab\Executor;
 
 class Job {
 
@@ -24,7 +24,7 @@ class Job {
     }
 
     /**
-     * Determines if the job is already setuped.
+     * Determines if the job is already setup-ed.
      *
      * @return bool
      */
